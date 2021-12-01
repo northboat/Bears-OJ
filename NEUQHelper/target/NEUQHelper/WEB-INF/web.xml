@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!--context初始化参数-->
+  <context-param>
+    <param-name>mysql</param-name>
+    <param-value>jdbc:mysql://localhost:3306</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>student</param-name>
+    <param-value>student</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>teacher</param-name>
+    <param-value>teacher</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>admin</param-name>
+    <param-value>admin</param-value>
+  </context-param>
+
+  <!--配置session自动销毁时间，单位：分钟-->
+  <session-config>
+    <session-timeout>1440</session-timeout>
+  </session-config>
+
+  <!--将url写在/hello 后面，为了404页面的设置不覆盖index页面-->
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>Servlet.Hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>get</servlet-name>
+    <servlet-class>Servlet.Get</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>get</servlet-name>
+    <url-pattern>/get</url-pattern>
+  </servlet-mapping>
+
+  <!--登录页面-->
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Servlet.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/hello/Login</url-pattern>
+  </servlet-mapping>
+
+  <!--注册-->
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Servlet.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/hello/Register</url-pattern>
+  </servlet-mapping>
+
+  <!--主界面-->
+  <servlet>
+    <servlet-name>Distribute</servlet-name>
+    <servlet-class>Servlet.Distribute</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Distribute</servlet-name>
+    <url-pattern>/hello/Distribute</url-pattern>
+  </servlet-mapping>
+
+  <!--搜索页面-->
+  <servlet>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>Servlet.SearchAns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/hello/Search</url-pattern>
+  </servlet-mapping>
+
+  <!--注销-->
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>Servlet.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/hello/Logout</url-pattern>
+  </servlet-mapping>
+
+  <!--管理员重置账号密码-->
+  <servlet>
+    <servlet-name>ResetAcc</servlet-name>
+    <servlet-class>Servlet.ResetAcc</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetAcc</servlet-name>
+    <url-pattern>/hello/ResetAcc</url-pattern>
+  </servlet-mapping>
+
+  <!--管理员通过搜索重置用户密码-->
+  <servlet>
+    <servlet-name>ResetAccAfterSearch</servlet-name>
+    <servlet-class>Servlet.ResetAccAfterSearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetAccAfterSearch</servlet-name>
+    <url-pattern>/hello/ResetAccAfterSearch</url-pattern>
+  </servlet-mapping>
+
+  <!--管理员搜索账号-->
+  <servlet>
+    <servlet-name>SearchUsr</servlet-name>
+    <servlet-class>Servlet.SearchUsr</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchUsr</servlet-name>
+    <url-pattern>/hello/SearchUsr</url-pattern>
+  </servlet-mapping>
+
+  <!--管理员新建账号-->
+  <servlet>
+    <servlet-name>SetAcc</servlet-name>
+    <servlet-class>Servlet.SetAcc</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetAcc</servlet-name>
+    <url-pattern>/hello/SetAcc</url-pattern>
+  </servlet-mapping>
+
+  <!--发布问题-->
+  <servlet>
+    <servlet-name>ReleaseQues</servlet-name>
+    <servlet-class>Servlet.ReleaseQues</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReleaseQues</servlet-name>
+    <url-pattern>/hello/ReleaseQues</url-pattern>
+  </servlet-mapping>
+
+  <!--发布回答-->
+  <servlet>
+    <servlet-name>ReleaseAns</servlet-name>
+    <servlet-class>Servlet.ReleaseAns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReleaseAns</servlet-name>
+    <url-pattern>/hello/ReleaseAns</url-pattern>
+  </servlet-mapping>
+
+  <!--修改密码-->
+  <servlet>
+    <servlet-name>ChangePassword</servlet-name>
+    <servlet-class>Servlet.ChangePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangePassword</servlet-name>
+    <url-pattern>/hello/ChangePassword</url-pattern>
+  </servlet-mapping>
+
+  <!--404
+  本来想用/hello/*去设置一个404界面
+  但由于.jsp没有在这儿注册，所以.jsp界面也会跳到404，暂时没找到解决办法
+  <servlet>
+    <servlet-name>Error</servlet-name>
+    <servlet-class>Servlet.Error</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Error</servlet-name>
+    <url-pattern>/hello/*</url-pattern>
+  </servlet-mapping>
+  -->
+
+</web-app>

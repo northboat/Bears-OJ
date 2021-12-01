@@ -1,0 +1,40 @@
+# Project: BarberShop
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Main.o Member.o Function.o Tony.o vipMember.o
+LINKOBJ  = Main.o Member.o Function.o Tony.o vipMember.o
+LIBS     = -L"D:/Dev-C++/MinGW64/lib" -L"D:/Dev-C++/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Dev-C++/MinGW64/include" -I"D:/Dev-C++/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-C++/MinGW64/include" -I"D:/Dev-C++/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = BarberShop.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+Member.o: Member.cpp
+	$(CPP) -c Member.cpp -o Member.o $(CXXFLAGS)
+
+Function.o: Function.cpp
+	$(CPP) -c Function.cpp -o Function.o $(CXXFLAGS)
+
+Tony.o: Tony.cpp
+	$(CPP) -c Tony.cpp -o Tony.o $(CXXFLAGS)
+
+vipMember.o: vipMember.cpp
+	$(CPP) -c vipMember.cpp -o vipMember.o $(CXXFLAGS)

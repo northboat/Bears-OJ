@@ -1,0 +1,2 @@
+E:\C++\VS\Easyx\Fencing Matchman\Fencing Matchman\Debug\Fencing Matchman.exe
+E:\C++\VS\Easyx\Fencing Matchman\Fencing Matchman\Debug\Fencing Matchman.pdb
