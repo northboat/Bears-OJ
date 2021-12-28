@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Update</title>
+
+    <link th:href="@{css/app.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <!-- 侧边栏：导入过程给active赋值，通过active判断高亮显示 -->
+    <div th:replace="~{commons/commons::sidebar}"></div>
+
+    <!--网页右侧-->
+    <div class="main">
+        <!-- 头部搜索框 -->
+        <div th:replace="~{commons/commons::topbar}"></div>
+
+        <!--信息展示内容-->
+        <!--信息展示-->
+        <main class="content">
+            <div class="container-fluid p-0">
+                <h1 class="h3 mb-3">Form</h1>
+
+                <div class="row">
+                    <!--录入单个学生信息-->
+                    <div class="col-12 col-xl-6" style="width: 100%;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">修改学生信息</h5><br>
+                            </div>
+
+                            <div class="card-body">
+                                <form th:action="@{/updateInfo}" method="post">
+                                    <!--基本信息-->
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">学号</label>
+                                        <div class="col-sm-2" th:text="${student.getId()}"></div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">姓名</label>
+                                        <div class="col-sm-2" th:text="${student.getName()}"></div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">性别</label>
+                                        <div class="col-sm-2" th:text="${student.getGender()}==1?'男':'女'"></div>
+                                    </div>
+
+
+                                    <!--三科-->
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">语文</label>
+                                        <div class="col-sm-2">
+                                            <input type="number" name="chi" class="form-control" th:value="${student.getGrade().getChinese()}">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">数学</label>
+                                        <div class="col-sm-2">
+                                            <input type="number" name="math" class="form-control" th:value="${student.getGrade().getMath()}">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-center">英语</label>
+                                        <div class="col-sm-2">
+                                            <input type="number" name="en" class="form-control" th:value="${student.getGrade().getEnglish()}">
+                                        </div>
+                                    </div>
+
+                                    <!--各科成绩-->
+                                    <div class="grades" style="width: 50%; position: absolute; left: 50%; top: 110px;">
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">物理</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="phy" class="form-control" th:value="${student.getGrade().getPhysics()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">化学</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="chem" class="form-control" th:value="${student.getGrade().getChemistry()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">生物</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="bio" class="form-control" th:value="${student.getGrade().getBiology()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">政治</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="pol" class="form-control" th:value="${student.getGrade().getPolitics()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">历史</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="his" class="form-control" th:value="${student.getGrade().getHistory()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-form-label col-sm-3 text-sm-center">地理</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="geo" class="form-control" th:value="${student.getGrade().getGeography()}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <div class="mb-3 row">
+                                        <div style="position: absolute; left: 100px; bottom: 25px;" class="col-sm-10 ml-sm-auto">
+                                            <!--这个按钮很重要，用于添加学生信息-->
+                                            <button type="submit" class="btn btn-primary">改变，就是好事~</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <div th:replace="~{commons/commons::footer}"></div>
+    </div>
+</div>
+<script th:src="@{js/app.js}"></script>
+</body>
+</html>

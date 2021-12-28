@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<link th:href="@{css/app.css}" rel="stylesheet">
+
+
+<!-- 导航框 -->
+<nav class="navbar navbar-expand navbar-light navbar-bg" th:fragment="topbar">
+    <a class="sidebar-toggle d-flex">
+        <i class="hamburger align-self-center"></i>
+    </a>
+
+    <form style="width: 500px;" class="d-none d-sm-inline-block" th:action="@{/search}" method="get">
+        <div class="input-group input-group-navbar">
+            <input type="text" name="searchContent" class="form-control" placeholder="Search Student By Id/Name..." aria-label="Search">
+            <button class="btn" type="submit">
+                <i class="align-middle" data-feather="search"></i>
+            </button>
+        </div>
+    </form>
+    <div style="width: 400px; text-align: center; height: 40px; line-height: 40px;">
+        <p th:text="${message}" th:if="${not #strings.isEmpty(message)}"></p>
+    </div>
+
+
+    <!--生成文件和退出登录-->
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-align">
+            <li>
+                <div class="position-relative" style="margin-right: 7px;">
+                    <!--生成文件按钮-->
+                    <a th:href="@{/save/all}">
+                        <button type="submit" class="btn btn-primary">生成文件</button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="position-relative">
+                    <a th:href="@{/logout}">
+                        <button type="submit" class="btn btn-primary">注销账号</button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- 侧边栏 -->
+<nav id="sidebar" class="sidebar" th:fragment="sidebar">
+    <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" th:href="@{/main}">
+            <!--从session中获取用户昵称-->
+            <span class="align-middle">[[${session.loginUser}]]</span>
+        </a>
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-header">
+                综合分析
+            </li>
+            <li th:class="${active=='main.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/main}">
+                    <i class="align-middle" data-feather="sliders"></i>
+                    <span class="align-middle">概况</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='allSubjects.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/allSubjects}">
+                    <i class="align-middle" data-feather="user"></i>
+                    <span class="align-middle">总览</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='scienceSubjects.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/scienceSubjects}">
+                    <i class="align-middle" data-feather="settings"></i>
+                    <span class="align-middle">理科</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='liberalSubjects.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/liberalSubjects}">
+                    <i class="align-middle" data-feather="credit-card"></i>
+                    <span class="align-middle">文科</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='mainSubjects.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/mainSubjects}">
+                    <i class="align-middle" data-feather="book"></i>
+                    <span class="align-middle">三科</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='science.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/science}">
+                    <i class="align-middle" data-feather="map"></i>
+                    <span class="align-middle">理综</span>
+                </a>
+            </li>
+
+            <li th:class="${active=='liberal.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/liberal}">
+                    <i class="align-middle" data-feather="coffee"></i>
+                    <span class="align-middle">文综</span>
+                </a>
+            </li>
+
+            <li class="sidebar-header">
+                单科分析
+            </li>
+            <li th:class="${not #strings.isEmpty(subject)?'sidebar-item active':'sidebar-item'}">
+                <a data-target="#ui" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="briefcase"></i>
+                    <span class="align-middle">选择科目</span>
+                    <span class="align-middle" th:text="'：'+${subject}" th:if="${not #strings.isEmpty(subject)}"></span>
+                </a>
+
+                <ul id="ui" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+
+                    <li th:class="${subject=='语文'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/chinese}">语文</a>
+                    </li>
+
+                    <li th:class="${subject=='数学'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/math}">数学</a>
+                    </li>
+
+                    <li th:class="${subject=='英语'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/english}">英语</a>
+                    </li>
+
+                    <li th:class="${subject=='物理'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/physics}">物理</a>
+                    </li>
+
+                    <li th:class="${subject=='化学'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/chemistry}">化学</a>
+                    </li>
+
+                    <li th:class="${subject=='生物'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/biology}">生物</a>
+                    </li>
+
+                    <li th:class="${subject=='政治'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/politics}">政治</a>
+                    </li>
+
+                    <li th:class="${subject=='历史'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/history}">历史</a>
+                    </li>
+
+                    <li th:class="${subject=='地理'?'sidebar-item active':'sidebar-item'}">
+                        <a class="sidebar-link" th:href="@{/geography}">地理</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="sidebar-header">
+                信息管理
+            </li>
+
+            <li th:class="${active=='form.html'?'sidebar-item active':'sidebar-item'}">
+                <a class="sidebar-link" th:href="@{/form}">
+                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                    <span class="align-middle">录入&合并信息</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--页脚-->
+<footer class="footer" th:fragment="footer">
+    <div class="container-fluid">
+        <div class="row text-muted">
+            <div class="col-6 text-left">
+                <p class="mb-0">
+                    <strong>I'll be Glad if you like it ———— NorthBoat's Performance Analysis System</strong> &copy;
+                    <strong>好好睡觉，天天摸鱼</strong>
+                </p>
+            </div>
+            <div class="col-6 text-right">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="text-muted" href="https://northboat.github.io/Blog/programing/java/">Support</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-muted" href="https://northboat.github.io/Blog/guide/">Guide</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-muted" href="https://northboat.github.io/Blog/my_project/">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script th:src="@{js/app.js}"></script>
+</html>
