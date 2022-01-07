@@ -9,3 +9,4 @@
 5. MyLisp(微型编译器)
 6. 踩云朵小游戏(html+css+js)
 7. 成绩管理系统(springboot+bootstrap+thymeleaf)
+8. 邮件定时发送系统(springboot+bootstrap+mybatis)
