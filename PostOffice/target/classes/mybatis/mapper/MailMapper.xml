@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.postoffice.mapper.MailMapper">
+    <select id="queryMailList" resultType="Mail">
+        select * from `mail`
+    </select>
+
+    <delete id="removeMail" parameterType="int">
+        delete from mail where `num` = #{num}
+    </delete>
+
+    <insert id="addMail" parameterType="Mail">
+        insert into mail(`num`, `count`, `name`, `to`, `from`, `subject`, `text`) values(#{num}, #{count}, #{name}, #{to}, #{from}, #{subject}, #{text})
+    </insert>
+
+    <update id="updateMailCount" parameterType="java.util.Map">
+        update `mail` set `count`=#{count} where `num`=#{num}
+    </update>
+</mapper>

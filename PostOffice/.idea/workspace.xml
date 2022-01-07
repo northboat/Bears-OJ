@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd9c2a8c-2734-4c67-a13d-5e9a428b4901" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@39.106.160.174" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\apache-maven-3.8.1\maven-repo" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="233kiJji5s0sxLuZBzk9O9nftQ2" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/bootstrap/js" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JavaWeb\springboot\PostOffice\src\main\resources\static\bootstrap\js" />
+      <recent name="E:\Spring\PostOffice\src\main\resources\static\img" />
+      <recent name="E:\Spring\PostOffice\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaWeb\springboot\PostOffice\src\main\resources\templates" />
+      <recent name="E:\JavaWeb\springboot\PostOffice\src\main\resources\static\js" />
+      <recent name="E:\JavaWeb\springboot\PostOffice\src\main\resources\static\bootstrap\js" />
+      <recent name="E:\Spring\PostOffice\src\main\java\com\postoffice\config" />
+      <recent name="E:\Spring\PostOffice\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PostofficeApplication">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postoffice.dao.Test" />
+      <module name="PostOffice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postoffice.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostOfficeApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PostOffice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postoffice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.postoffice" />
+      <option name="MAIN_CLASS_NAME" value="com.postoffice.PostOfficeApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostofficeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="PostOffice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.postoffice.PostOfficeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PostOfficeApplicationTests.contextLoads" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd9c2a8c-2734-4c67-a13d-5e9a428b4901" name="Default Changelist" comment="" />
+      <created>1640970283999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640970283999</updated>
+      <workItem from="1640970286176" duration="6710000" />
+      <workItem from="1640978931893" duration="1827000" />
+      <workItem from="1641014309817" duration="18036000" />
+      <workItem from="1641116116131" duration="2729000" />
+      <workItem from="1641129672982" duration="603000" />
+      <workItem from="1641146048782" duration="2990000" />
+      <workItem from="1641183934375" duration="2782000" />
+      <workItem from="1641187385366" duration="429000" />
+      <workItem from="1641205119454" duration="2508000" />
+      <workItem from="1641208150759" duration="162000" />
+      <workItem from="1641306946956" duration="1672000" />
+      <workItem from="1641314727256" duration="2025000" />
+      <workItem from="1641380472228" duration="2361000" />
+      <workItem from="1641396543565" duration="4934000" />
+      <workItem from="1641447437429" duration="12188000" />
+      <workItem from="1641461039885" duration="6476000" />
+      <workItem from="1641469787267" duration="213000" />
+      <workItem from="1641470484490" duration="1006000" />
+      <workItem from="1641545830525" duration="1134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Notifications" timestamp="1641401302873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1641401302873" />
+    <state x="552" y="179" key="#SQL_Dialects" timestamp="1641405157787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1641405157787" />
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1641455640801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1641455640801" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1641460654850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1641460654850" />
+    <state x="618" y="18" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1640970726193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="618" y="18" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1640970726193" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1640972735301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1640972735301" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1641116541195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1641116541195" />
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.0.center" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.0.left" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.0.right" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.1.bottom" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.1.center" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.1.left" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="234" key="GridCell.Tab.1.right" timestamp="1641546973962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="234" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641546973962" />
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom" timestamp="1641149062839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641149062839" />
+    <state width="1877" height="352" key="GridCell.Tab.2.center" timestamp="1641149062839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641149062839" />
+    <state width="1877" height="352" key="GridCell.Tab.2.left" timestamp="1641149062839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641149062839" />
+    <state width="1877" height="352" key="GridCell.Tab.2.right" timestamp="1641149062839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641149062839" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1641455963383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1641455963383" />
+    <state x="804" y="387" width="343" height="265" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1641455462382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="804" y="387" width="343" height="265" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1641455462382" />
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1641027583193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1641027583193" />
+    <state x="334" y="222" key="new project wizard" timestamp="1640974015626">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="222" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1640974015626" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1641459002390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1641459002390" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641029139361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1641029139361" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Maven/apache-maven-3.8.1/maven-repo/org/springframework/spring-context-support/5.2.12.RELEASE/spring-context-support-5.2.12.RELEASE.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.class</url>
+          <line>308</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/Maven/apache-maven-3.8.1/maven-repo/javax/mail/mail/1.4/mail-1.4.jar!/javax/mail/Service.class</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
