@@ -1,3 +1,3 @@
-# NEUQHelper
+## NEUQHelper
 
-网页部署在 tomcat 容器中：39.106.160.174:8080/NEUQHelper
+小贴吧，Servlet+JSP+C3P0，非常古老的技术栈，简单的 CRUD

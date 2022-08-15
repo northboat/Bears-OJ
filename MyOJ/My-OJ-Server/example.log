@@ -1,0 +1,234 @@
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10001,procId-891} connected
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10001} pool-connect
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10001, pstmt-20000} created. select * from `question`
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10001, pstmt-20000} Parameters : []
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10001, pstmt-20000} Types : []
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10001, pstmt-20000} executed. 71.8292 millis. select * from `question`
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} open
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Header: [num, title, level, thumb, example, name, tag, func]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [0, 翻转整数, 易, 3, 21, reverseNum, Stack&Queue, int reverseNum(int num)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [1, 有效的括号, 易, 1, 17, validBrackets, Stack&Queue, boolean validBrackets(String brackets)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [2, 简化路径, 中, 2, 12, simplifyPath, Stack&Queue, String simplifyPath(String path)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [3, 链表的头插法, 易, 1, 21, insertByHead, List, Node insertByHead(int[] nums)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [4, 链表的尾插法, 易, 1, 21, insertByTail, List, Node insertByTail(int[] nums)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [5, 删除链表的倒数第N个节点, 中, 1, 21, removeNthFromEnd, List, Node removeNthFromEnd(Node head, int n)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [6, 最长的公共前缀, 易, 1, 17, longestCommonPrefix, String&Arr, String longestCommonPrefix(String[] strs)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [7, 字符串转整数, 中, 1, 21, strToNum, String&Arr, int strToNum(String str)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [8, 第三大的数, 易, 1, 21, thirdMax, String&Arr, int thirdMax(int[] nums)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [9, 中序遍历二叉树, 易, 1, 22, inorderTraversal, Tree, int[] inorderTraversal(Node root)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [10, 前序遍历二叉树, 易, 0, 22, preorderTraversal, Tree, int[] preorderTraversal(Node root)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [11, 排序数组, 易, 0, 21, sortNums, Sort&Search, int[] sortNums(int[] nums)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} Result: [12, 矩阵递增路径, 难, 2, 12, longestIncrPath, Map, int longestIncrPath(int[][] matrix)]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10001, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10001, pstmt-20000} closed
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10001} pool-recycle
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10001} closed
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10002,procId-892} connected
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10002} pool-connect
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10002, pstmt-20001} created. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10002, pstmt-20001} Parameters : [12]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10002, pstmt-20001} Types : [INTEGER]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10002, pstmt-20001} executed. 44.1791 millis. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} open
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Header: [num, title, desc, memory_limit, time_limit, example_input, example_output, tips, customized]
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} Result: [12, 矩阵递增路径, 给你一个m x n的数字矩阵，可以从任一节点出发，每次移动只可向上、下、左、右四个方向并且不能超出矩阵，请你找出数字递增的最长路径, 0, 44, [1 2 3 4] [8 7 6 5] [9 10 11 12], 12, 深度优先搜索、图、记忆化搜索, 0]
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10002, pstmt-20001, rs-50001} closed
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10002, pstmt-20001} closed
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10002} pool-recycle
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10002} pool-connect
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10002, pstmt-20002} created. select * from `question` where num=?
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10002, pstmt-20002} Parameters : [12]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10002, pstmt-20002} Types : [INTEGER]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10002, pstmt-20002} executed. 42.6742 millis. select * from `question` where num=?
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10002, pstmt-20002, rs-50002} open
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10002, pstmt-20002, rs-50002} Header: [num, title, level, thumb, example, name, tag, func]
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10002, pstmt-20002, rs-50002} Result: [12, 矩阵递增路径, 难, 2, 12, longestIncrPath, Map, int longestIncrPath(int[][] matrix)]
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10002, pstmt-20002, rs-50002} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10002, pstmt-20002} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10002} pool-recycle
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10003,procId-893} connected
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10003} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10002} closed
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10004,procId-894} connected
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10004, pstmt-20003} created. select * from `question`
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10004, pstmt-20003} Parameters : []
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10004, pstmt-20003} Types : []
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10004, pstmt-20003} executed. 43.7285 millis. select * from `question`
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} open
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Header: [num, title, level, thumb, example, name, tag, func]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [0, 翻转整数, 易, 3, 21, reverseNum, Stack&Queue, int reverseNum(int num)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [1, 有效的括号, 易, 1, 17, validBrackets, Stack&Queue, boolean validBrackets(String brackets)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [2, 简化路径, 中, 2, 12, simplifyPath, Stack&Queue, String simplifyPath(String path)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [3, 链表的头插法, 易, 1, 21, insertByHead, List, Node insertByHead(int[] nums)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [4, 链表的尾插法, 易, 1, 21, insertByTail, List, Node insertByTail(int[] nums)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [5, 删除链表的倒数第N个节点, 中, 1, 21, removeNthFromEnd, List, Node removeNthFromEnd(Node head, int n)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [6, 最长的公共前缀, 易, 1, 17, longestCommonPrefix, String&Arr, String longestCommonPrefix(String[] strs)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [7, 字符串转整数, 中, 1, 21, strToNum, String&Arr, int strToNum(String str)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [8, 第三大的数, 易, 1, 21, thirdMax, String&Arr, int thirdMax(int[] nums)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [9, 中序遍历二叉树, 易, 1, 22, inorderTraversal, Tree, int[] inorderTraversal(Node root)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [10, 前序遍历二叉树, 易, 0, 22, preorderTraversal, Tree, int[] preorderTraversal(Node root)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [11, 排序数组, 易, 0, 21, sortNums, Sort&Search, int[] sortNums(int[] nums)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} Result: [12, 矩阵递增路径, 难, 2, 12, longestIncrPath, Map, int longestIncrPath(int[][] matrix)]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10004, pstmt-20003, rs-50003} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10004, pstmt-20003} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8089-exec-6 druid.sql.Connection - {conn-10004} closed
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10005,procId-895} connected
+DEBUG http-nio-8089-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10005, pstmt-20004} created. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : [12]
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10005, pstmt-20004} Types : [INTEGER]
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 51.591 millis. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50004} open
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50004} Header: [num, title, desc, memory_limit, time_limit, example_input, example_output, tips, customized]
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50004} Result: [12, 矩阵递增路径, 给你一个m x n的数字矩阵，可以从任一节点出发，每次移动只可向上、下、左、右四个方向并且不能超出矩阵，请你找出数字递增的最长路径, 0, 44, [1 2 3 4] [8 7 6 5] [9 10 11 12], 12, 深度优先搜索、图、记忆化搜索, 0]
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50004} closed
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10005, pstmt-20004} closed
+DEBUG http-nio-8089-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8089-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8089-exec-6 druid.sql.Statement - {conn-10005, pstmt-20005} created. select * from `question` where num=?
+DEBUG http-nio-8089-exec-6 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [12]
+DEBUG http-nio-8089-exec-6 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER]
+DEBUG http-nio-8089-exec-6 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 42.4913 millis. select * from `question` where num=?
+DEBUG http-nio-8089-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50005} open
+DEBUG http-nio-8089-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50005} Header: [num, title, level, thumb, example, name, tag, func]
+DEBUG http-nio-8089-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50005} Result: [12, 矩阵递增路径, 难, 2, 12, longestIncrPath, Map, int longestIncrPath(int[][] matrix)]
+DEBUG http-nio-8089-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50005} closed
+DEBUG http-nio-8089-exec-6 druid.sql.Statement - {conn-10005, pstmt-20005} closed
+DEBUG http-nio-8089-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10006,procId-896} connected
+DEBUG http-nio-8089-exec-7 druid.sql.Connection - {conn-10006} closed
+DEBUG http-nio-8089-exec-7 druid.sql.Connection - {conn-10005} closed
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10007,procId-897} connected
+DEBUG http-nio-8089-exec-7 druid.sql.Connection - {conn-10007} pool-connect
+DEBUG http-nio-8089-exec-7 druid.sql.Statement - {conn-10007, pstmt-20006} created. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-7 druid.sql.Statement - {conn-10007, pstmt-20006} Parameters : [1543625674@qq.com, 12]
+DEBUG http-nio-8089-exec-7 druid.sql.Statement - {conn-10007, pstmt-20006} Types : [VARCHAR, INTEGER]
+DEBUG http-nio-8089-exec-7 druid.sql.Statement - {conn-10007, pstmt-20006} executed. 46.2491 millis. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-7 druid.sql.ResultSet - {conn-10007, pstmt-20006, rs-50006} open
+DEBUG http-nio-8089-exec-7 druid.sql.ResultSet - {conn-10007, pstmt-20006, rs-50006} Header: [account, num, title, key1, key2, key3, key4, val1, val2, val3, val4, code]
+DEBUG http-nio-8089-exec-7 druid.sql.ResultSet - {conn-10007, pstmt-20006, rs-50006} Result: [1543625674@qq.com, 12, 成功通过 OwO, 通过样例:, 平均用时:, 内存使用:, 创建容器时间:, 12, 0ms, 0MiB, 237, class Solution{<br>&nbsp;&nbsp;&nbsp;&nbsp;public int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};<br>&nbsp;&nbsp;&nbsp;&nbsp;public int rows, columns;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public int longestIncrPath(int[][] matrix) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp]
+DEBUG http-nio-8089-exec-7 druid.sql.ResultSet - {conn-10007, pstmt-20006, rs-50006} closed
+DEBUG http-nio-8089-exec-7 druid.sql.Statement - {conn-10007, pstmt-20006} closed
+DEBUG http-nio-8089-exec-7 druid.sql.Connection - {conn-10007} pool-recycle
+DEBUG http-nio-8089-exec-8 druid.sql.Connection - {conn-10007} pool-connect
+DEBUG http-nio-8089-exec-8 druid.sql.Statement - {conn-10007, pstmt-20007} created. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-8 druid.sql.Statement - {conn-10007, pstmt-20007} Parameters : [12]
+DEBUG http-nio-8089-exec-8 druid.sql.Statement - {conn-10007, pstmt-20007} Types : [INTEGER]
+DEBUG http-nio-8089-exec-8 druid.sql.Statement - {conn-10007, pstmt-20007} executed. 49.0229 millis. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-8 druid.sql.ResultSet - {conn-10007, pstmt-20007, rs-50007} open
+DEBUG http-nio-8089-exec-8 druid.sql.ResultSet - {conn-10007, pstmt-20007, rs-50007} Header: [num, title, desc, memory_limit, time_limit, example_input, example_output, tips, customized]
+DEBUG http-nio-8089-exec-8 druid.sql.ResultSet - {conn-10007, pstmt-20007, rs-50007} Result: [12, 矩阵递增路径, 给你一个m x n的数字矩阵，可以从任一节点出发，每次移动只可向上、下、左、右四个方向并且不能超出矩阵，请你找出数字递增的最长路径, 0, 44, [1 2 3 4] [8 7 6 5] [9 10 11 12], 12, 深度优先搜索、图、记忆化搜索, 0]
+DEBUG http-nio-8089-exec-8 druid.sql.ResultSet - {conn-10007, pstmt-20007, rs-50007} closed
+DEBUG http-nio-8089-exec-8 druid.sql.Statement - {conn-10007, pstmt-20007} closed
+DEBUG http-nio-8089-exec-8 druid.sql.Connection - {conn-10007} pool-recycle
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10008,procId-898} connected
+DEBUG http-nio-8089-exec-9 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-9 druid.sql.Statement - {conn-10008, pstmt-20008} created. select * from `comment` where `question`=?
+DEBUG http-nio-8089-exec-9 druid.sql.Statement - {conn-10008, pstmt-20008} Parameters : [12]
+DEBUG http-nio-8089-exec-9 druid.sql.Statement - {conn-10008, pstmt-20008} Types : [INTEGER]
+DEBUG http-nio-8089-exec-9 druid.sql.Statement - {conn-10008, pstmt-20008} executed. 47.7621 millis. select * from `comment` where `question`=?
+DEBUG http-nio-8089-exec-9 druid.sql.ResultSet - {conn-10008, pstmt-20008, rs-50008} open
+DEBUG http-nio-8089-exec-9 druid.sql.ResultSet - {conn-10008, pstmt-20008, rs-50008} Header: [question, floor, from, to, content]
+DEBUG http-nio-8089-exec-9 druid.sql.ResultSet - {conn-10008, pstmt-20008, rs-50008} closed
+DEBUG http-nio-8089-exec-9 druid.sql.Statement - {conn-10008, pstmt-20008} closed
+DEBUG http-nio-8089-exec-9 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-10 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-10 druid.sql.Statement - {conn-10008, pstmt-20009} created. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-10 druid.sql.Statement - {conn-10008, pstmt-20009} Parameters : [12]
+DEBUG http-nio-8089-exec-10 druid.sql.Statement - {conn-10008, pstmt-20009} Types : [INTEGER]
+DEBUG http-nio-8089-exec-10 druid.sql.Statement - {conn-10008, pstmt-20009} executed. 45.6342 millis. select * from `detail` where `num`=?
+DEBUG http-nio-8089-exec-10 druid.sql.ResultSet - {conn-10008, pstmt-20009, rs-50009} open
+DEBUG http-nio-8089-exec-10 druid.sql.ResultSet - {conn-10008, pstmt-20009, rs-50009} Header: [num, title, desc, memory_limit, time_limit, example_input, example_output, tips, customized]
+DEBUG http-nio-8089-exec-10 druid.sql.ResultSet - {conn-10008, pstmt-20009, rs-50009} Result: [12, 矩阵递增路径, 给你一个m x n的数字矩阵，可以从任一节点出发，每次移动只可向上、下、左、右四个方向并且不能超出矩阵，请你找出数字递增的最长路径, 0, 44, [1 2 3 4] [8 7 6 5] [9 10 11 12], 12, 深度优先搜索、图、记忆化搜索, 0]
+DEBUG http-nio-8089-exec-10 druid.sql.ResultSet - {conn-10008, pstmt-20009, rs-50009} closed
+DEBUG http-nio-8089-exec-10 druid.sql.Statement - {conn-10008, pstmt-20009} closed
+DEBUG http-nio-8089-exec-10 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20010} created. select * from `info` where `account`=?
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20010} Parameters : [1543625674@qq.com]
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20010} Types : [VARCHAR]
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20010} executed. 40.961 millis. select * from `info` where `account`=?
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10008, pstmt-20010, rs-50010} open
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10008, pstmt-20010, rs-50010} Header: [account, name, finished, simple_finished, middle_finished, hard_finished, finished_index, register_time, grade, skillful_lang, java_finished, c_finished, python_finished]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10008, pstmt-20010, rs-50010} Result: [1543625674@qq.com, NorthBoat, 8, 5, 2, 1, 1010001110111, 2022-04-05 06:05:05.0, 大二, Java, 8, 0, 0]
+DEBUG http-nio-8089-exec-1 druid.sql.ResultSet - {conn-10008, pstmt-20010, rs-50010} closed
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20010} closed
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20011} created. update `info` set finished=?, java_finished=?, c_finished=?, python_finished=?, finished_index=?, skillful_lang=?, simple_finished=?, middle_finished=?, hard_finished=? where `account`=?
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20011} Parameters : [8, 8, 0, 0, 1010001110111, Java, 5, 2, 1, 1543625674@qq.com]
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20011} Types : [INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20011} executed. 82.5864 millis. update `info` set finished=?, java_finished=?, c_finished=?, python_finished=?, finished_index=?, skillful_lang=?, simple_finished=?, middle_finished=?, hard_finished=? where `account`=?
+DEBUG http-nio-8089-exec-1 druid.sql.Statement - {conn-10008, pstmt-20011} closed
+DEBUG http-nio-8089-exec-1 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20012} created. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20012} Parameters : [1543625674@qq.com, 12]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20012} Types : [VARCHAR, INTEGER]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20012} executed. 44.2071 millis. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10008, pstmt-20012, rs-50011} open
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10008, pstmt-20012, rs-50011} Header: [account, num, title, key1, key2, key3, key4, val1, val2, val3, val4, code]
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10008, pstmt-20012, rs-50011} Result: [1543625674@qq.com, 12, 成功通过 OwO, 通过样例:, 平均用时:, 内存使用:, 创建容器时间:, 12, 0ms, 0MiB, 237, class Solution{<br>&nbsp;&nbsp;&nbsp;&nbsp;public int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};<br>&nbsp;&nbsp;&nbsp;&nbsp;public int rows, columns;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public int longestIncrPath(int[][] matrix) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp]
+DEBUG http-nio-8089-exec-3 druid.sql.ResultSet - {conn-10008, pstmt-20012, rs-50011} closed
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20012} closed
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10008} pool-connect
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20013} created. update `result` set `title`=?, `key1`=?, `key2`=?, `key3`=?, `key4`=?, `val1`=?, `val2`=?, `val3`=?, `val4`=?, `code`=? where `account`=? and `num`=?
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20013} Parameters : [成功通过 OwO, 通过样例:, 平均用时:, 内存使用:, 创建容器时间:, 12, 0ms, 0MiB, 5837, class Solution{<br>&nbsp;&nbsp;&nbsp;&nbsp;public int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};<br>&nbsp;&nbsp;&nbsp;&nbsp;public int rows, columns;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public int longestIncrPath(int[][] matrix) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp, 1543625674@qq.com, 12]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20013} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER]
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20013} executed. 83.879 millis. update `result` set `title`=?, `key1`=?, `key2`=?, `key3`=?, `key4`=?, `val1`=?, `val2`=?, `val3`=?, `val4`=?, `code`=? where `account`=? and `num`=?
+DEBUG http-nio-8089-exec-3 druid.sql.Statement - {conn-10008, pstmt-20013} closed
+DEBUG http-nio-8089-exec-3 druid.sql.Connection - {conn-10008} pool-recycle
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10008} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10007} closed
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10009,procId-899} connected
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10009} pool-connect
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20014} created. select * from `info` where `account`=?
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20014} Parameters : [1543625674@qq.com]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20014} Types : [VARCHAR]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20014} executed. 49.6402 millis. select * from `info` where `account`=?
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10009, pstmt-20014, rs-50012} open
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10009, pstmt-20014, rs-50012} Header: [account, name, finished, simple_finished, middle_finished, hard_finished, finished_index, register_time, grade, skillful_lang, java_finished, c_finished, python_finished]
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10009, pstmt-20014, rs-50012} Result: [1543625674@qq.com, NorthBoat, 8, 5, 2, 1, 1010001110111, 2022-04-05 06:05:05.0, 大二, Java, 8, 0, 0]
+DEBUG http-nio-8089-exec-2 druid.sql.ResultSet - {conn-10009, pstmt-20014, rs-50012} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20014} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10009} pool-recycle
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10009} pool-connect
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20015} created. update `info` set finished=?, java_finished=?, c_finished=?, python_finished=?, finished_index=?, skillful_lang=?, simple_finished=?, middle_finished=?, hard_finished=? where `account`=?
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20015} Parameters : [8, 8, 0, 0, 1010001110111, Java, 5, 2, 1, 1543625674@qq.com]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20015} Types : [INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20015} executed. 92.6675 millis. update `info` set finished=?, java_finished=?, c_finished=?, python_finished=?, finished_index=?, skillful_lang=?, simple_finished=?, middle_finished=?, hard_finished=? where `account`=?
+DEBUG http-nio-8089-exec-2 druid.sql.Statement - {conn-10009, pstmt-20015} closed
+DEBUG http-nio-8089-exec-2 druid.sql.Connection - {conn-10009} pool-recycle
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10009} pool-connect
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20016} created. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20016} Parameters : [1543625674@qq.com, 12]
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20016} Types : [VARCHAR, INTEGER]
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20016} executed. 42.9633 millis. select * from `result` where `account` = ? and `num` = ?
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10009, pstmt-20016, rs-50013} open
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10009, pstmt-20016, rs-50013} Header: [account, num, title, key1, key2, key3, key4, val1, val2, val3, val4, code]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10009, pstmt-20016, rs-50013} Result: [1543625674@qq.com, 12, 成功通过 OwO, 通过样例:, 平均用时:, 内存使用:, 创建容器时间:, 12, 0ms, 0MiB, 5837, class Solution{<br>&nbsp;&nbsp;&nbsp;&nbsp;public int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};<br>&nbsp;&nbsp;&nbsp;&nbsp;public int rows, columns;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public int longestIncrPath(int[][] matrix) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp]
+DEBUG http-nio-8089-exec-4 druid.sql.ResultSet - {conn-10009, pstmt-20016, rs-50013} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20016} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10009} pool-recycle
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10009} pool-connect
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20017} created. update `result` set `title`=?, `key1`=?, `key2`=?, `key3`=?, `key4`=?, `val1`=?, `val2`=?, `val3`=?, `val4`=?, `code`=? where `account`=? and `num`=?
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20017} Parameters : [成功通过 OwO, 通过样例:, 平均用时:, 内存使用:, 创建容器时间:, 12, 0ms, 0MiB, 2966, class Solution{<br>&nbsp;&nbsp;&nbsp;&nbsp;public int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};<br>&nbsp;&nbsp;&nbsp;&nbsp;public int rows, columns;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;public int longestIncrPath(int[][] matrix) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp, 1543625674@qq.com, 12]
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20017} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER]
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20017} executed. 85.501 millis. update `result` set `title`=?, `key1`=?, `key2`=?, `key3`=?, `key4`=?, `val1`=?, `val2`=?, `val3`=?, `val4`=?, `code`=? where `account`=? and `num`=?
+DEBUG http-nio-8089-exec-4 druid.sql.Statement - {conn-10009, pstmt-20017} closed
+DEBUG http-nio-8089-exec-4 druid.sql.Connection - {conn-10009} pool-recycle
+DEBUG http-nio-8089-exec-5 druid.sql.Connection - {conn-10009} pool-connect
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10009, pstmt-20018} created. select * from `question` where num=?
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10009, pstmt-20018} Parameters : [12]
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10009, pstmt-20018} Types : [INTEGER]
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10009, pstmt-20018} executed. 52.8281 millis. select * from `question` where num=?
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10009, pstmt-20018, rs-50014} open
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10009, pstmt-20018, rs-50014} Header: [num, title, level, thumb, example, name, tag, func]
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10009, pstmt-20018, rs-50014} Result: [12, 矩阵递增路径, 难, 2, 12, longestIncrPath, Map, int longestIncrPath(int[][] matrix)]
+DEBUG http-nio-8089-exec-5 druid.sql.ResultSet - {conn-10009, pstmt-20018, rs-50014} closed
+DEBUG http-nio-8089-exec-5 druid.sql.Statement - {conn-10009, pstmt-20018} closed
+DEBUG http-nio-8089-exec-5 druid.sql.Connection - {conn-10009} pool-recycle
+DEBUG Druid-ConnectionPool-Create-625399124 druid.sql.Connection - {conn-10010,procId-900} connected

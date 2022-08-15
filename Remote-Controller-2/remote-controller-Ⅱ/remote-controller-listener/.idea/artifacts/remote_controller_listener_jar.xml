@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="remote-controller-listener:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/remote_controller_listener_jar</output-path>
+    <root id="archive" name="remote-controller-listener.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="remote-controller-listener" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/org/json/json/20211205/json-20211205.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/org/slf4j/slf4j-nop/1.7.6/slf4j-nop-1.7.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Programming/Maven/repo/redis/clients/jedis/4.0.1/jedis-4.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

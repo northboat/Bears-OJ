@@ -1,0 +1,12 @@
+/usr
+/
+/home/usr
+/home
+/home/java
+/home/music/eason
+/home/music/linkinpark
+/home
+/usr/local/nginx/conf
+/home
+/
+/opt/zip

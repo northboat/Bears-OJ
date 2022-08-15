@@ -1,0 +1,7 @@
+com\northboat\remotecontrollerserver\pojo\User.class
+com\northboat\remotecontrollerserver\utils\RedisUtil.class
+com\northboat\remotecontrollerserver\controller\CommandController.class
+com\northboat\remotecontrollerserver\service\CommandService.class
+com\northboat\remotecontrollerserver\service\impl\CommandServiceImpl.class
+com\northboat\remotecontrollerserver\config\RedisConfig.class
+com\northboat\remotecontrollerserver\RemoteControllerServerApplication.class

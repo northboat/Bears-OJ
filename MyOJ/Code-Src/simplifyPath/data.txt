@@ -1,0 +1,12 @@
+/usr/
+/../
+/home//usr/
+/usr/./local/../../home/
+./home/desktop/../java/
+/home/music/eason/
+./home/java/../music/linkinpark/
+/home//
+/usr//local//nginx//conf/
+/./././././home
+/home/local/bin/redis/../../../../
+/opt/temp/.././zip/

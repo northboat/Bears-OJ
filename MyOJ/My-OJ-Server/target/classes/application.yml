@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: neuqoj
+  datasource:
+    username: root
+    password: "011026"
+    url: jdbc:mysql://39.106.160.174:3306/neuqoj?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,wall,log4j
+  thymeleaf:
+    cache: false
+  redis:
+    host: 39.106.160.174
+    port: 6379
+    password: "011026"
+
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.oj.neuqoj.pojo
+
+server:
+  port: 8089
