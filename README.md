@@ -12,4 +12,5 @@
 8. 定时邮件发送（SpringBoot+Mybatis / POP3，寒假小玩意儿）
 8. 远程控制器2（SpringBoot+Redis，寒假小玩意儿）
 8. 在线判题系统（SpringBoot+Mybatis+Docker / Vue，大一画的饼，大二下简单实现）
+8. 以往用过的博客（Vue）
 
