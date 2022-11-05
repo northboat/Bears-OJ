@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>English</title>
+
+    <link th:href="@{css/app.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <!-- 侧边栏：导入过程给active赋值，通过active判断高亮显示 -->
+    <div th:replace="~{commons/commons::sidebar(subject='英语')}"></div>
+
+    <!--网页右侧-->
+    <div class="main">
+        <!-- 导航框 -->
+        <nav class="navbar navbar-expand navbar-light navbar-bg" th:fragment="topbar">
+            <a class="sidebar-toggle d-flex">
+                <i class="hamburger align-self-center"></i>
+            </a>
+
+            <form style="width: 500px;" class="d-none d-sm-inline-block" th:action="@{/search}" method="get">
+                <div class="input-group input-group-navbar">
+                    <input type="text" name="searchContent" class="form-control" placeholder="Search Student By Id/Name..." aria-label="Search">
+                    <button class="btn" type="submit">
+                        <i class="align-middle" data-feather="search"></i>
+                    </button>
+                </div>
+            </form>
+            <div style="width: 400px; text-align: center; height: 40px; line-height: 40px;"></div>
+
+
+            <!--生成文件和退出登录-->
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav navbar-align">
+                    <li>
+                        <div class="position-relative" style="margin-right: 7px;">
+                            <!--生成文件按钮-->
+                            <a th:href="@{/save/en}">
+                                <button type="submit" class="btn btn-primary">生成文件</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="position-relative">
+                            <a th:href="@{/logout}">
+                                <button type="submit" class="btn btn-primary">注销账号</button>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!--信息展示内容-->
+        <!--信息展示-->
+        <main class="content">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">Tables</h1>
+
+                <div class="row">
+                    <div class="col-12 col-xl-6" style="width: 100%;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">英语排名</h4>
+                            </div>
+                            <table class="table">
+                                <!--表头-->
+                                <thead>
+                                <tr>
+                                    <th style="width:17%;">排名</th>
+                                    <th style="width:17%;">姓名</th>
+                                    <th style="width:17%">学号</th>
+                                    <th style="width:17%">性别</th>
+                                    <th style="width:17%">英语</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+
+                                <!--排名展示-->
+                                <tbody>
+                                <tr th:each="stu:${students}">
+                                    <td th:text="${num.getNum()==students.size()}?${num.rebootNum()}:${num.getIncreaseNum()}"></td>
+                                    <td th:text="${stu.getName()}"></td>
+                                    <td th:text="${stu.getId()}"></td>
+                                    <td th:text="${stu.getGender()==1?'男':'女'}"></td>
+                                    <td th:text="${stu.getGrade().getEnglish()}"></td>
+                                    <td class="table-action">
+                                        <a type="submit" th:href="@{/update/english/}+${stu.getId()}" style="margin-right: 9px;"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a type="submit" th:href="@{/drop/english/}+${stu.getId()}" ><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <div th:replace="~{commons/commons::footer}"></div>
+    </div>
+</div>
+<script th:src="@{js/app.js}"></script>
+</body>
+</html>
+<body>
+
+</body>
+</html>

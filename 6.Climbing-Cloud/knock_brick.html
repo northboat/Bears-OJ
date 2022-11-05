@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打砖块小游戏</title>
+
+    <!-- 引入jQuery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+    <!-- 设置样式 -->
+    <style>
+        #box {
+            width: 600px;
+            height: 650px;
+            border: 5px solid black;
+            position: relative;
+            left: 500px;
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        }
+
+        #ball {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: white;
+            position: absolute;
+            top: 560px;
+        }
+
+        #btn {
+            width: 150px;
+            height: 90px;
+            position: fixed;
+            left: 730px;
+            top: 350px;
+            border-radius: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #slider {
+            width: 120px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 585px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px 2px red;
+            cursor: pointer;
+        }
+
+        #brick div {
+            width: 98px;
+            height: 20px;
+            float: left;
+            border: 1px solid black;
+        }
+
+        #tip {
+            width: 280px;
+            position: fixed;
+            top: 100px;
+            left: 150px;
+            border: 1px solid black;
+            text-indent: 2em;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #grade {
+            width: 180px;
+            position: fixed;
+            top: 100px;
+            left: 1150px;
+            border: 1px solid black;
+            text-indent: 2em;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #grade h3 {
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="ball"></div>
+        <div id="slider"></div>
+        <div id="brick"></div>
+    </div>
+    <div id="tip">
+        <h1>提示</h1>
+        <p>点击按钮开始游戏</p>
+        <p>方法：使用鼠标按住滑块，左右拖动，反弹小球</p>
+        <p>小球触碰到底部为失败</p>
+        <p>清空所有方块游戏胜利</p>
+    </div>
+    <div id="grade">
+        <h3>游戏强度：</h3>
+        <h2></h2>
+        <h3>得分:</h3>
+        <h1>00</h1>
+    </div>
+    <button id="btn">开始游戏</button>
+
+
+    <script>
+        var box = document.getElementById("box");
+        var ball = document.getElementById("ball");
+        var btn = document.getElementById("btn");
+        var slider = document.getElementById("slider")
+        var obrick = document.getElementById("brick")
+        var brickArr = obrick.getElementsByTagName("div")
+        var grade = document.getElementById("grade")
+        var rank = grade.children[1]
+        var score = grade.children[3]
+        var sco = 0;
+        var timer;
+        var isRunning = false;
+        var speedX = rand(9, 12);
+        var speedY = -rand(9, 12);
+        var speed = speedX - speedY;
+        console.log(speed)
+        switch (speed) {
+            case 6: case 7: case 8:
+                rank.innerHTML = "简单";
+                break;
+            case 9: case 10: case 11:
+                rank.innerHTML = "一般";
+                break;
+            case 12: case 13: case 14:
+                rank.innerHTML = "中等";
+                break;
+            case 15: case 16: case 17:
+                rank.innerHTML = "难"
+                break;
+            case 18: case 19: case 20:
+                rank.innerHTML = "很难"
+                slider.style.width = 100 + "px";
+                break;
+            case 21: case 22:
+                rank.innerHTML = "特别难"
+                slider.style.width = 80 + "px";
+                break;
+            case 23: case 24:
+                rank.innerHTML = "哭了"
+                slider.style.width = 60 + "px";
+                break;
+        }
+
+        //随机生成小球与滑块位置
+        var beginGo = rand(100, 500)
+        ball.style.left = beginGo + 40 + "px"
+        slider.style.left = beginGo + "px"
+
+        //开始按钮点击事件
+        btn.onclick = function () {
+            btn.style.display = "none";
+            isRunning = true;
+            clearInterval(timer);
+            timer = setInterval(function () {
+                //获取小球初始位置
+                var ballLeft = ball.offsetLeft;
+                var ballTop = ball.offsetTop;
+
+                //获取小球运动之后位置
+                var nextleft = ballLeft + speedX;
+                var nexttop = ballTop + speedY;
+
+                //水平边界判断，当小球的left值小于容器左边界或者大于容器右边界时，将水平方向速度取反
+                if (nextleft <= 0 || nextleft >= box.offsetWidth - ball.offsetWidth - 10) {
+                    speedX = -speedX;
+                }
+                //垂直边界判断，当小球的top值小于容器上边界时，将垂直方向速度取反
+                if (nexttop <= 0) {
+                    speedY = -speedY;
+                }
+                //当小球触碰到下边界时，提示“游戏失败”，重新刷新页面
+                if (nexttop > box.offsetHeight - ball.offsetHeight) {
+                    location.reload();
+                    alert("You were dead！")
+                }
+
+                //将运动后的位置重新赋值给小球
+                ball.style.left = nextleft + "px";
+                ball.style.top = nexttop + "px";
+
+                //小球与滑块的碰撞检测
+                if (knock(ball, slider)) {
+                    speedY = -speedY;
+                }
+
+                //小球与方块的碰撞检测
+                for (var j = 0; j < brickArr.length; j++) {
+                    if (knock(brickArr[j], ball)) {
+                        speedY = -speedY
+                        obrick.removeChild(brickArr[j]);
+                        sco++;
+                        score.innerHTML = sco;
+                        break;
+                    }
+                }
+
+                //当容器中方块数量为0时，宣布“游戏胜利”，刷新页面
+                if (brickArr.length <= 0) {
+                    location.reload();
+                    alert("You win!")
+                }
+            }, 20)
+        }
+
+        //鼠标控制滑块
+        slider.onmousedown = function (e) {
+            var e = e || window.event;
+            //获取滑块初始位置
+            var offsetX = e.clientX - slider.offsetLeft;
+            if (isRunning) {
+                document.onmousemove = function (e) {
+                    var e = e || window.event;
+                    var l = e.clientX - offsetX;
+                    if (l <= 0) {
+                        l = 0;
+                    }
+                    if (l >= box.offsetWidth - slider.offsetWidth - 10) {
+                        l = box.offsetWidth - slider.offsetWidth - 10;
+                    }
+                    slider.style.left = l + "px";
+                }
+            }
+        }
+        document.onmouseup = function () {
+            document.onmousemove = null;
+        }
+
+        //按键控制滑块
+        // document.onkeydown = function (e) {
+        //     var e = e || window.event;
+        //     var code = e.keyCode || e.which;
+        //     var offsetX = slider.offsetLeft;
+        //     if (isRunning) {
+        //         switch (code) {
+        //             case 37:
+        //                 if (offsetX <= 0) {
+        //                     slider.style.left = 0
+        //                     break;
+        //                 }
+        //                 slider.style.left = offsetX * 4 / 5 + "px";
+        //                 break;
+        //             case 39:
+        //                 if (offsetX >= box.offsetWidth - slider.offsetWidth - 10) {
+        //                     slider.style.left = box.offsetWidth - slider.offsetWidth;
+        //                     break;
+        //                 }
+        //                 slider.style.left = (box.offsetWidth - slider.offsetWidth - offsetX) / 5 + offsetX + "px";
+        //                 break;
+        //         }
+        //     }
+
+        // }
+
+
+        createBrick(72)
+
+        //容器内创建方块
+        function createBrick(n) {
+            var oBrick = document.getElementById("brick")
+            //在大盒子brick中插入n个div方块，并给予随机颜色
+            for (var i = 0; i < n; i++) {
+                var node = document.createElement("div");
+                node.style.backgroundColor = color();
+                oBrick.appendChild(node);
+            }
+            //获取所有的方块
+            var brickArr = obrick.getElementsByTagName("div")
+            //根据每个方块当前所在位置，将left与top值赋给方块
+            for (var i = 0; i < brickArr.length; i++) {
+                brickArr[i].style.left = brickArr[i].offsetLeft + "px";
+                brickArr[i].style.top = brickArr[i].offsetTop + "px";
+            }
+            //将所有方块设置成绝对定位，注意这一步与上一步顺序不能调换
+            for (var i = 0; i < brickArr.length; i++) {
+                brickArr[i].style.position = "absolute";
+            }
+        }
+
+        //随机生成颜色
+        function color() {
+            var result = "#";
+            for (var i = 0; i < 6; i++) {
+                result += rand(0, 15).toString(16)
+                // 把十进制的数字变成十六进制的字符串:0 1 ...9 a b c d f
+            }
+            return result;
+        }
+
+        //随机数生成
+        function rand(n, m) {
+            return n + parseInt(Math.random() * (m - n + 1));
+        }
+        //碰撞检测函数
+        function knock(node1, node2) {
+            var l1 = node1.offsetLeft;
+            var r1 = node1.offsetLeft + node1.offsetWidth;
+            var t1 = node1.offsetTop;
+            var b1 = node1.offsetTop + node1.offsetHeight;
+            var l2 = node2.offsetLeft;
+            var r2 = node2.offsetLeft + node2.offsetWidth;
+            var t2 = node2.offsetTop;
+            var b2 = node2.offsetTop + node2.offsetHeight;
+            if (l2 > r1 || r2 < l1 || t2 > b1 || b2 < t1) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

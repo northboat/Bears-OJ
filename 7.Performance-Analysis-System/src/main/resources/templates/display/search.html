@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+
+    <link th:href="@{css/app.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <!-- 侧边栏：导入过程给active赋值，通过active判断高亮显示 -->
+    <div th:replace="~{commons/commons::sidebar}"></div>
+
+    <!--网页右侧-->
+    <div class="main">
+        <!-- 头部搜索框 -->
+        <div th:replace="~{commons/commons::topbar}"></div>
+
+        <!--信息展示内容-->
+        <!--信息展示-->
+        <main class="content">
+            <!--分数展示-->
+            <div class="container-fluid p-0">
+                <h1 class="h3 mb-3">Infos</h1>
+                <div class="col-12 col-xl-6" style="width: 100%;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">成绩信息</h4>
+                        </div>
+                        <table class="table">
+                            <!--表头-->
+                            <thead>
+                            <tr>
+                                <th style="width:6%;">姓名</th>
+                                <th style="width:6%">学号</th>
+                                <th style="width:5%">性别</th>
+                                <th style="width:5%">语</th>
+                                <th style="width:5%">数</th>
+                                <th style="width:5%">英</th>
+                                <th style="width:5%">物</th>
+                                <th style="width:5%">化</th>
+                                <th style="width:5%">生</th>
+                                <th style="width:5%">政</th>
+                                <th style="width:5%">史</th>
+                                <th style="width:5%">地</th>
+                                <th style="width:6%">三科</th>
+                                <th style="width:6%">文综</th>
+                                <th style="width:6%">理综</th>
+                                <th style="width:6%">文科</th>
+                                <th style="width:6%">理科</th>
+                                <th style="width:6%">总分</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <!--信息展示-->
+                            <tbody>
+                            <tr th:each="stu:${students}">
+                                <td th:text="${stu.getName()}"></td>
+                                <td th:text="${stu.getId()}"></td>
+                                <td th:text="${stu.getGender()==1?'男':'女'}"></td>
+                                <td th:text="${stu.getGrade().getChinese()}"></td>
+                                <td th:text="${stu.getGrade().getMath()}"></td>
+                                <td th:text="${stu.getGrade().getEnglish()}"></td>
+                                <td th:text="${stu.getGrade().getPhysics()}"></td>
+                                <td th:text="${stu.getGrade().getChemistry()}"></td>
+                                <td th:text="${stu.getGrade().getBiology()}"></td>
+                                <td th:text="${stu.getGrade().getPolitics()}">
+                                <td th:text="${stu.getGrade().getHistory()}">
+                                <td th:text="${stu.getGrade().getGeography()}">
+                                <td th:text="${stu.getGrade().getMainSum()}">
+                                <td th:text="${stu.getGrade().getLiberalSum()}">
+                                <td th:text="${stu.getGrade().getScienceSum()}">
+                                <td th:text="${stu.getGrade().getLiberalMainSum()}">
+                                <td th:text="${stu.getGrade().getScienceMainSum()}">
+                                <td th:text="${stu.getGrade().getAllSum()}">
+                                <td class="table-action">
+                                    <a type="submit" th:href="@{/update/allSubjects/}+${stu.getId()}" style="margin-right: 9px;"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a type="submit" th:href="@{/drop/allSubjects/}+${stu.getId()}" ><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--排名展示-->
+            <div class="container-fluid p-0">
+                <h1 class="h3 mb-3">Ranks</h1>
+                <div class="col-12 col-xl-6" style="width: 100%;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">排名信息</h4>
+                        </div>
+                        <table class="table">
+                            <!--表头-->
+                            <thead>
+                            <tr>
+                                <th style="width:6%;">姓名</th>
+                                <th style="width:6%">学号</th>
+                                <th style="width:5%">性别</th>
+                                <th style="width:5%">语</th>
+                                <th style="width:5%">数</th>
+                                <th style="width:5%">英</th>
+                                <th style="width:5%">物</th>
+                                <th style="width:5%">化</th>
+                                <th style="width:5%">生</th>
+                                <th style="width:5%">政</th>
+                                <th style="width:5%">史</th>
+                                <th style="width:5%">地</th>
+                                <th style="width:5%">三科</th>
+                                <th style="width:6%">文综</th>
+                                <th style="width:6%">理综</th>
+                                <th style="width:6%">文科</th>
+                                <th style="width:6%">理科</th>
+                                <th style="width:6%">总分</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <!--信息展示-->
+                            <tbody>
+                            <tr th:each="stu:${students}">
+                                <td th:text="${stu.getName()}"></td>
+                                <td th:text="${stu.getId()}"></td>
+                                <td th:text="${stu.getGender()==1?'男':'女'}"></td>
+                                <td th:text="${stu.getRank().getChi()}"></td>
+                                <td th:text="${stu.getRank().getMath()}"></td>
+                                <td th:text="${stu.getRank().getEn()}"></td>
+                                <td th:text="${stu.getRank().getPhy()}"></td>
+                                <td th:text="${stu.getRank().getChem()}"></td>
+                                <td th:text="${stu.getRank().getBio()}"></td>
+                                <td th:text="${stu.getRank().getPol()}">
+                                <td th:text="${stu.getRank().getHis()}">
+                                <td th:text="${stu.getRank().getGeo()}">
+                                <td th:text="${stu.getRank().getMain()}">
+                                <td th:text="${stu.getRank().getLiberal()}">
+                                <td th:text="${stu.getRank().getScience()}">
+                                <td th:text="${stu.getRank().getMainLib()}">
+                                <td th:text="${stu.getRank().getMainSci()}">
+                                <td th:text="${stu.getRank().getAll()}">
+                                <td class="table-action">
+                                    <a type="submit" th:href="@{/update/allSubjects/}+${stu.getId()}" style="margin-right: 9px;"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a type="submit" th:href="@{/drop/allSubjects/}+${stu.getId()}" ><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <div th:replace="~{commons/commons::footer}"></div>
+    </div>
+</div>
+<script th:src="@{js/app.js}"></script>
+</body>
+</html>

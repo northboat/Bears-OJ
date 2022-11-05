@@ -1,0 +1,39 @@
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://39.106.160.174:3306</property>
+        <property name="user">root</property>
+        <property name="password">011026</property>
+
+        <!--初始化申请连接数量-->
+        <property name="initialPoolSize">5</property>
+        <!--最大连接数量-->
+        <property name="maxPoolSize">10</property>
+        <!--超时时间-->
+        <property name="checkoutTimeout">3000</property>
+    </default-config>
+
+    <named-config name="users">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://39.106.160.174:3306/users?characterEncoding=utf8</property>>
+        <property name="user">root</property>
+        <property name="password">011026</property>
+
+        <property name="initialPoolSize">10</property>
+        <property name="maxPoolSize">1000</property>
+        <property name="checkoutTimeout">10000</property>
+    </named-config>
+
+
+    <named-config name="ques&amp;ans">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://39.106.160.174:3306/qa?characterEncoding=utf8</property>
+        <property name="user">root</property>
+        <property name="password">011026</property>
+
+        <property name="initialPoolSize">50</property>
+        <property name="maxPoolSize">10000</property>
+        <property name="checkoutTimeout">20000</property>
+    </named-config>
+
+</c3p0-config>
