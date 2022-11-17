@@ -1,1 +1,0 @@
-day by day going to die

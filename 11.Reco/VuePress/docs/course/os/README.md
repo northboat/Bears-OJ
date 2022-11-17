@@ -1,1 +1,0 @@
-learn nm by coding them
